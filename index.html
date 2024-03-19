@@ -1,0 +1,182 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Data Science Project</title>
+		<meta charset="utf-8" />
+		
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="assets/css/dropdown.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+		<script type="module" src="https://pyscript.net/releases/2023.12.1/core.js"></script>
+		
+		
+		
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header" class="alt">
+						<h1>Data Science Project</h1>
+						<p>How did the average budget, revenue, genre and runtime of movies evolve since 1915?<br /></p>
+					</header>
+
+				<!-- Nav -->
+				<nav id="nav">
+					<ul>
+						<li><a href="#intro" class="active">Introduction</a></li>
+						<li class="dropdown"> <!-- Added class "dropdown" -->
+							<a>Sub questions</a>
+							<ul class="dropdown-content">
+								<li><a href="#subquestion1">Subquestion1</a></li>
+								<li><a href="#subquestion2">Subquestion2</a></li>
+								<li><a href="#subquestion3">Subquestion3</a></li>
+								<li><a href="#subquestion4">Subquestion4</a></li>
+								<li><a href="#subquestion5">Subquestion5</a></li>
+							</ul>
+						</li>
+						<li><a>About us</a></li>
+					</ul>
+				</nav>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Introduction -->
+							<section id="intro" class="main">
+								<div class="spotlight">
+									<div class="content">
+										<h1>Introduction</h1>
+										<h2 style="text-align: left;">Data collection</h2>
+										<div style="display:flex; flex-direction: row;  justify-content: space-around;">
+										<p style="width: 50%;">We have collected data from IMDB which is a database of all the cinematographic records in the entire world. We have combined this database with the TMDB API which allows us to obtain information about the revenue and budget of each movie and some information about Oscars Awards to analyze that is useful to analyze the success of movies. The TMDB API could only provide us information about the revenue and budget of around ten thousand movies. For this research question, we narrowed down to only movies and we excluded tv series, documentaries, tv shows, etc.</p>
+										<div style="justify-content: space-around; align-items: center; display: flex; flex-wrap: wrap; ">
+											<img src="images/imdb.png" alt="IMDB Image" style="width: 150px;"> 
+										<img src="images/tmdb.jpeg" alt="TMDB Image" style="width: 150px;"> 
+										<img src="images/oscars.jpeg" alt="Oscars Image" style="width: 230px;"> 
+										</div>
+										</div>
+									</div>
+								</div>
+									<div>
+										<h2>Data Available</h2>
+										<p>These are some of the available features that we could collect: genre, release year, budget, runtime, directors, writers, rating, number of votes, awards, budget, revenue</p>
+									</div>
+							</section>
+							
+
+						<!-- First Section -->
+							<section id="subquestion1" class="main special">
+								<header class="major">
+									<h2>Average Movie Runtime over the Years</h2>
+									<div style="display: flex; flex-direction: row; align-items: center; justify-content: space-around; flex-wrap: wrap;">
+										<iframe src="assets/graphs/htmlfiles/Category1/1runtime_years/runtime_years.html" width="400px" height="400"></iframe>
+										<iframe src="assets/graphs/htmlfiles/Category1/2genre_years/genre_over_years.html" width="600px" height="400"></iframe>
+										<div style="display: flex; flex-direction: row; align-items: center; justify-content: space-around; flex-wrap: wrap; width: 100%;">
+											<!-- <div style="display: flex; flex-direction: row; align-items: center;">
+												<label style="margin: auto;">Select:</label>
+												<select id="relation_years" style="width: 150px; margin-left: 5px;">
+													<option value="Budget">Budget</option>
+													<option value="Rating">Rating</option>
+													<option value="Revenue">Revenue</option>
+													<option value="Votes">Votes</option>
+												</select>
+											</div> -->																					
+												<iframe class="output_iframe" src="assets\graphs\htmlfiles\Category1\3relation_years\year_budget.html" style="border: none; width: 50%; height: 400px;"></iframe>
+												<iframe class="output_iframe" src="assets\graphs\htmlfiles\Category1\3relation_years\year_revenue.html" style="border: none; width: 50%; height: 400px;"></iframe>
+												<iframe class="output_iframe" src="assets\graphs\htmlfiles\Category1\3relation_years\year_rating.html" style="border: none; width: 50%; height: 400px;"></iframe>											
+										</div>																					
+									</div>
+									
+									
+								</header>
+								
+							</section>
+							<section id="subquestion2" class="main special">
+								<header class="major">
+									<h2>Movie Genre Distribution</h2>
+									<div style="display: flex; flex-direction: column; align-items: center; justify-content: space-around; flex-wrap: wrap;">
+										<iframe src="assets/graphs/htmlfiles/Category2/1distribution single/genres_single.html" width="700px" height="400"></iframe>
+										<iframe src="assets/graphs/htmlfiles/Category2/2distribution combinations/genres_combinations.html" width="700px" height="400"></iframe>
+										<div style="display: flex; flex-direction: row; align-items: center; justify-content: space-around; flex-wrap: wrap; width: 100%;">																													
+												<iframe class="output_iframe" src="assets\graphs\htmlfiles\Category2/3relations/genre_rating.html" style="border: none; width: 50%; height: 400px;"></iframe>
+												<iframe class="output_iframe" src="assets\graphs\htmlfiles\Category2/3relations/genre_revenue.html" style="border: none; width: 50%; height: 400px;"></iframe>
+												<iframe class="output_iframe" src="assets\graphs\htmlfiles\Category2/4oscars/genre_oscars.html" style="border: none; width: 70%; height: 400px;"></iframe>											
+										</div>																					
+									</div>
+								</header>
+							</section>
+							<section id="subquestion3" class="main special">
+								<header class="major">
+									<h2> Genres of produced movies per year</h2>
+									<div style="display: flex; flex-direction: row; align-items: center; justify-content: space-around; flex-wrap: wrap;">
+										<iframe src="assets/graphs/htmlfiles/Category3/1runtime/runtime_rating.html" width="500px" height="400"></iframe>
+										<iframe src="assets/graphs/htmlfiles/Category3/1runtime/runtime_revenue.html" width="500px" height="400"></iframe>
+										<div style="display: flex; flex-direction: row; align-items: center; justify-content: space-around; flex-wrap: wrap; width: 100%;">																													
+												<iframe class="output_iframe" src="assets\graphs\htmlfiles\Category3/2budget/budget_rating.html" style="border: none; width: 50%; height: 400px;"></iframe>
+												<iframe class="output_iframe" src="assets\graphs\htmlfiles\Category3/2budget/budget_revenue.html" style="border: none; width: 50%; height: 400px;"></iframe>
+												<iframe class="output_iframe" src="assets\graphs\htmlfiles\Category3/2budget/budget_votes.html" style="border: none; width: 70%; height: 400px;"></iframe>											
+										</div>																					
+									</div>
+								</header>
+							</section>
+
+						<!-- Second Section -->
+							<section id="subquestion4" class="main special">
+								<header class="major">
+									<h2> Oscars Awards</h2>
+									<div style="display: flex; flex-direction: row; align-items: center; justify-content: space-around; flex-wrap: wrap;">
+										<iframe src="assets/graphs/htmlfiles/Category4/oscars/oscars_both_budget.html" width="500px" height="400"></iframe>
+										<iframe src="assets/graphs/htmlfiles/Category4/oscars/oscars_both_rating.html" width="500px" height="400"></iframe>
+										<div style="display: flex; flex-direction: row; align-items: center; justify-content: space-around; flex-wrap: wrap; width: 100%;">																													
+												<iframe class="output_iframe" src="assets\graphs\htmlfiles\Category4/oscars/oscars_won_budget.html" style="border: none; width: 50%; height: 400px;"></iframe>
+												<iframe class="output_iframe" src="assets\graphs\htmlfiles\Category4/oscars/oscars_won_rating.html" style="border: none; width: 50%; height: 400px;"></iframe>
+												<iframe class="output_iframe" src="assets\graphs\htmlfiles\Category4/oscars/oscars_won_revenue.html" style="border: none; width: 70%; height: 400px;"></iframe>											
+										</div>																					
+									</div>
+									
+								</header>
+								
+								</footer>
+							</section>
+
+						<!-- Get Started -->
+							<section id="subquestion5" class="main special">
+								<header class="major">
+									<h2>Congue imperdiet</h2>
+									
+								</header>
+								
+							</section>
+
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<section>
+							<h2>Aliquam sed mauris</h2>
+							<p>Sed lorem ipsum dolor sit amet et nullam consequat feugiat consequat magna adipiscing tempus etiam dolore veroeros. eget dapibus mauris. Cras aliquet, nisl ut viverra sollicitudin, ligula erat egestas velit, vitae tincidunt odio.</p>
+							
+						</section>
+						
+						
+					</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+			<!--<script src="assets/js/graph.js"></script>-->
+	</body>
+</html>
