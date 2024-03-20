@@ -1,0 +1,6 @@
+.fixed-row {
+    position: sticky;
+    top: 0; /* Adjust this value to set when the row should become sticky */
+    background-color: white; /* Set the desired background color */
+    z-index: 1; /* Ensure it appears above other content */
+}
