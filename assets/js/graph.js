@@ -1,33 +1,138 @@
-/* // Function to create a new iframe and add a plot
-function addPlot(selectedValue) {
-    // Create a new iframe element
-    var newIframe = document.createElement('iframe');
-    newIframe.style.border = 'none';
-    newIframe.style.width = '100%';
-    newIframe.style.height = '400px';
 
-    // Set the src attribute of the new iframe based on the selected option
-    if (selectedValue === 'Budget') {
-        newIframe.src = '../graphs/htmlfiles/Category1/3relation_years/year_budget.html';
-    } else if (selectedValue === 'Rating') {
-        newIframe.src = '../graphs/htmlfiles/Category1/3relation_years/year_rating.html';
-    } else if (selectedValue === 'Revenue') {
-        newIframe.src = '../graphs/htmlfiles/Category1/3relation_years/year_revenue.html';
-    } else if (selectedValue === 'Votes') {
-        newIframe.src = '../graphs/htmlfiles/Category1/3relation_years/year_votes.html';
+// Function to show the selected iframe and hide the others
+function showSelectedIframe() {
+    var selectedOption = document.getElementById('selectOption').value;
+    
+    // Loop through all iframes
+    var iframes = document.querySelectorAll('iframe');
+    for (var i = 0; i < iframes.length; i++) {
+        if (iframes[i].id === selectedOption) {
+            iframes[i].style.display = 'block';
+        } else if (iframes[i].classList.contains('cat1')) {
+            iframes[i].style.display = 'none'; // Hide the iframe with class 'cat1'
+        }
+    }
+}
+
+// Add event listener to the dropdown list
+document.getElementById('selectOption').addEventListener('change', showSelectedIframe);
+
+
+
+function showSelectedIframecat2() {
+    var selectedOption = document.getElementById('selectOptioncat2').value;
+    
+    // Loop through all iframes
+    var iframes = document.querySelectorAll('iframe');
+    for (var i = 0; i < iframes.length; i++) {
+        if (iframes[i].id === selectedOption) {
+            iframes[i].style.display = 'block';
+        } else if (iframes[i].classList.contains('cat2')) {
+            iframes[i].style.display = 'none'; 
+        }
+    }
+}
+document.getElementById('selectOptioncat2').addEventListener('change', showSelectedIframecat2);
+
+function showSelectedIframecat3() {
+    var selectedOption = document.getElementById('selectOptioncat3').value;
+    
+    // Loop through all iframes
+    var iframes = document.querySelectorAll('iframe');
+    for (var i = 0; i < iframes.length; i++) {
+        if (iframes[i].id === selectedOption) {
+            iframes[i].style.display = 'block';
+        } else if (iframes[i].classList.contains('cat3')) {
+            iframes[i].style.display = 'none'; 
+        }
+    }
+}
+document.getElementById('selectOptioncat3').addEventListener('change', showSelectedIframecat3);
+
+function showSelectedIframecat4() {
+    var selectedOption = document.getElementById('selectOptioncat4').value;
+    
+    // Loop through all iframes
+    var iframes = document.querySelectorAll('iframe');
+    for (var i = 0; i < iframes.length; i++) {
+        if (iframes[i].id === selectedOption) {
+            iframes[i].style.display = 'block';
+        } else if (iframes[i].classList.contains('cat4')) {
+            iframes[i].style.display = 'none'; 
+        }
+    }
+}
+document.getElementById('selectOptioncat4').addEventListener('change', showSelectedIframecat4);
+function showSelectedIframecat5() {
+    var selectedOption = document.getElementById('selectOptioncat5').value;
+    
+    // Loop through all iframes
+    var iframes = document.querySelectorAll('iframe');
+    for (var i = 0; i < iframes.length; i++) {
+        if (iframes[i].id === selectedOption) {
+            iframes[i].style.display = 'block';
+        } else if (iframes[i].classList.contains('cat5')) {
+            iframes[i].style.display = 'none'; 
+        }
+    }
+}
+document.getElementById('selectOptioncat5').addEventListener('change', showSelectedIframecat5);
+function showSelectedIframecat6() {
+    var selectedOption = document.getElementById('selectOptioncat6').value;
+    
+    // Loop through all iframes
+    var iframes = document.querySelectorAll('iframe');
+    for (var i = 0; i < iframes.length; i++) {
+        if (iframes[i].id === selectedOption) {
+            iframes[i].style.display = 'block';
+        } else if (iframes[i].classList.contains('cat6')) {
+            iframes[i].style.display = 'none'; 
+        }
+    }
+}
+document.getElementById('selectOptioncat6').addEventListener('change', showSelectedIframecat6);
+
+function hideIframe(selecterrow, selecterpos, className, add=None) {
+    var selectedRows = document.getElementById(selecterrow).value;
+    var selectedPosition = document.getElementById(selecterpos).value;
+
+    // Hide all iframes with the given class
+    var iframes = document.querySelectorAll('iframe.' + className);
+    for (var i = 0; i < iframes.length; i++) {
+        iframes[i].style.display = 'none';
     }
 
-    // Append the new iframe to the parent element
-    var parentElement = document.getElementById('output_graph_cat1_relation');
-    parentElement.appendChild(newIframe);
+    // Show the selected iframe
+    var iframeToShow = document.getElementById('iframe_' + selectedRows + '_' + selectedPosition+add);
+    if (iframeToShow) {
+        iframeToShow.style.display = 'block';
+    } else {
+        console.error('Selected iframe not found.');
+    }
+}
+function showIframecat7() {
+    var selectedRows = document.getElementById('selectRowscat7').value;
+    var selectedPosition = document.getElementById('selectPositioncat7').value;
+
+    // Hide all iframes with the given class
+    var iframes = document.querySelectorAll('iframe.cat7');
+    for (var i = 0; i < iframes.length; i++) {
+        iframes[i].style.display = 'none';
+    }
+
+    // Show the selected iframe
+    var iframeToShow = document.getElementById('iframe_' + selectedRows + '_' + selectedPosition);
+    if (iframeToShow) {
+        iframeToShow.style.display = 'block';
+        console.log('iframe_' + selectedRows + '_' + selectedPosition + " founded")
+    } else {
+        console.error('Selected iframe not found.');
+    }
 }
 
-// Function to update the iframe source based on the selected option
-function updateIframe(selectedValue) {
-    // Call the addPlot function to add a new plot
-    addPlot(selectedValue);
-}
- */
+
+
+
 
 
 
