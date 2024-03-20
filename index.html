@@ -78,18 +78,20 @@
 										<iframe src="assets/graphs/htmlfiles/Category1/1runtime_years/runtime_years.html" width="400px" height="400"></iframe>
 										<iframe src="assets/graphs/htmlfiles/Category1/2genre_years/genre_over_years.html" width="600px" height="400"></iframe>
 										<div style="display: flex; flex-direction: row; align-items: center; justify-content: space-around; flex-wrap: wrap; width: 100%;">
-											<!-- <div style="display: flex; flex-direction: row; align-items: center;">
+											<div style="display: flex; flex-direction: row; align-items: center;">
 												<label style="margin: auto;">Select:</label>
-												<select id="relation_years" style="width: 150px; margin-left: 5px;">
-													<option value="Budget">Budget</option>
-													<option value="Rating">Rating</option>
-													<option value="Revenue">Revenue</option>
-													<option value="Votes">Votes</option>
+												<select id="selectOption">
+													<option value="budget">Budget</option>
+													<option value="revenue">Revenue</option>
+													<option value="rating">Rating</option>
+													<option value="votes">Votes</option>
 												</select>
-											</div> -->																					
-												<iframe class="output_iframe" src="assets\graphs\htmlfiles\Category1\3relation_years\year_budget.html" style="border: none; width: 50%; height: 400px;"></iframe>
-												<iframe class="output_iframe" src="assets\graphs\htmlfiles\Category1\3relation_years\year_revenue.html" style="border: none; width: 50%; height: 400px;"></iframe>
-												<iframe class="output_iframe" src="assets\graphs\htmlfiles\Category1\3relation_years\year_rating.html" style="border: none; width: 50%; height: 400px;"></iframe>											
+											</div> 	
+																														
+												<iframe id="budget" class="cat1" src="assets\graphs\htmlfiles\Category1\3relation_years\year_budget.html" style="display:flex; border: none; width: 50%; height: 400px;"></iframe>
+												<iframe id="revenue" class="cat1" src="assets\graphs\htmlfiles\Category1\3relation_years\year_revenue.html" style="display:none; border: none; width: 50%; height: 400px;"></iframe>
+												<iframe id="rating" class="cat1" src="assets\graphs\htmlfiles\Category1\3relation_years\year_rating.html" style="display:none; border: none; width: 50%; height: 400px;"></iframe>											
+												<iframe id="votes" class="cat1" src="assets\graphs\htmlfiles\Category1\3relation_years\year_votes.html" style="display:none; border: none; width: 50%; height: 400px;"></iframe>											
 										</div>																					
 									</div>
 									
@@ -103,9 +105,18 @@
 									<div style="display: flex; flex-direction: column; align-items: center; justify-content: space-around; flex-wrap: wrap;">
 										<iframe src="assets/graphs/htmlfiles/Category2/1distribution single/genres_single.html" width="700px" height="400"></iframe>
 										<iframe src="assets/graphs/htmlfiles/Category2/2distribution combinations/genres_combinations.html" width="700px" height="400"></iframe>
-										<div style="display: flex; flex-direction: row; align-items: center; justify-content: space-around; flex-wrap: wrap; width: 100%;">																													
-												<iframe class="output_iframe" src="assets\graphs\htmlfiles\Category2/3relations/genre_rating.html" style="border: none; width: 50%; height: 400px;"></iframe>
-												<iframe class="output_iframe" src="assets\graphs\htmlfiles\Category2/3relations/genre_revenue.html" style="border: none; width: 50%; height: 400px;"></iframe>
+										<div style="display: flex; flex-direction: row; align-items: center; justify-content: space-around; flex-wrap: wrap; width: 100%;">		
+											<div style="display: flex; flex-direction: row; align-items: center;">
+												<label style="margin: auto;">Select:</label>
+												<select id="selectOptioncat2">
+													<option value="ratingcat2">Rating</option>
+													<option value="revenuecat2">Revenue</option>
+													<option value="votescat2">Votes</option>
+												</select>
+											</div> 
+												<iframe id="ratingcat2" class="cat2" src="assets\graphs\htmlfiles\Category2/3relations/genre_rating.html" style="display:flex; border: none; width: 50%; height: 400px;"></iframe>
+												<iframe id="revenuecat2" class="cat2" src="assets\graphs\htmlfiles\Category2/3relations/genre_revenue.html" style="display:none; border: none; width: 50%; height: 400px;"></iframe>
+												<iframe id="votescat2" class="cat2" src="assets\graphs\htmlfiles\Category2/3relations/genre_votes.html" style="display:none; border: none; width: 50%; height: 400px;"></iframe>
 												<iframe class="output_iframe" src="assets\graphs\htmlfiles\Category2/4oscars/genre_oscars.html" style="border: none; width: 70%; height: 400px;"></iframe>											
 										</div>																					
 									</div>
@@ -114,14 +125,36 @@
 							<section id="subquestion3" class="main special">
 								<header class="major">
 									<h2> Genres of produced movies per year</h2>
-									<div style="display: flex; flex-direction: row; align-items: center; justify-content: space-around; flex-wrap: wrap;">
-										<iframe src="assets/graphs/htmlfiles/Category3/1runtime/runtime_rating.html" width="500px" height="400"></iframe>
-										<iframe src="assets/graphs/htmlfiles/Category3/1runtime/runtime_revenue.html" width="500px" height="400"></iframe>
-										<div style="display: flex; flex-direction: row; align-items: center; justify-content: space-around; flex-wrap: wrap; width: 100%;">																													
-												<iframe class="output_iframe" src="assets\graphs\htmlfiles\Category3/2budget/budget_rating.html" style="border: none; width: 50%; height: 400px;"></iframe>
-												<iframe class="output_iframe" src="assets\graphs\htmlfiles\Category3/2budget/budget_revenue.html" style="border: none; width: 50%; height: 400px;"></iframe>
-												<iframe class="output_iframe" src="assets\graphs\htmlfiles\Category3/2budget/budget_votes.html" style="border: none; width: 70%; height: 400px;"></iframe>											
-										</div>																					
+									<div style="display: flex; flex-direction: column; align-items: center; justify-content: space-around; flex-wrap: wrap;">
+										<div style="display: flex; flex-direction: row; align-items: center; justify-content: space-around; flex-wrap: wrap; width: 100%;">
+										<div style="display: flex; flex-direction: row; align-items: center; width: auto;">
+											<label style="margin: auto;">Select:</label>
+											<select id="selectOptioncat3">
+												<option value="ratingcat3">Rating</option>
+												<option value="revenuecat3">Revenue</option>
+												<option value="votescat3">Votes</option>
+											</select>
+										</div> 
+											<iframe id="ratingcat3" class="cat3" src="assets/graphs/htmlfiles/Category3/1runtime/runtime_rating.html" style="display:flex; border: none; width: 50%; height: 400px;"></iframe>
+											<iframe id="revenuecat3" class="cat3" src="assets/graphs/htmlfiles/Category3/1runtime/runtime_revenue.html" style="display:none; border: none; width: 50%; height: 400px;"></iframe>
+											<iframe id="votescat3" class="cat3" src="assets\graphs\htmlfiles\Category3/1runtime/runtime_votes.html" style="display:none; border: none; width: 50%; height: 400px;"></iframe>											
+										</div>
+									<div style="display: flex; flex-direction: column; align-items: center; justify-content: space-around; flex-wrap: wrap; width: 100%;">
+										<div style="display: flex; flex-direction: row; align-items: center; justify-content: space-around; flex-wrap: wrap; width: 100%;">
+										<div style="display: flex; flex-direction: row; align-items: center; width: auto;">
+											<label style="margin: auto;">Select:</label>
+											<select id="selectOptioncat4">
+												<option value="ratingcat4">Rating</option>
+												<option value="revenuecat4">Revenue</option>
+												<option value="votescat4">Votes</option>
+											</select>
+										</div> 
+											<iframe id="ratingcat4" class="cat4" src="assets/graphs/htmlfiles/Category3/2budget/budget_rating.html" style="display:flex; border: none; width: 50%; height: 400px;"></iframe>
+											<iframe id="revenuecat4" class="cat4" src="assets/graphs/htmlfiles/Category3/2budget/budget_revenue.html" style="display:none; border: none; width: 50%; height: 400px;"></iframe>
+											<iframe id="votescat4" class="cat4" src="assets\graphs\htmlfiles\Category3/2budget/budget_votes.html" style="display:none; border: none; width: 50%; height: 400px;"></iframe>											
+										</div>
+										
+																														
 									</div>
 								</header>
 							</section>
@@ -130,16 +163,35 @@
 							<section id="subquestion4" class="main special">
 								<header class="major">
 									<h2> Oscars Awards</h2>
-									<div style="display: flex; flex-direction: row; align-items: center; justify-content: space-around; flex-wrap: wrap;">
-										<iframe src="assets/graphs/htmlfiles/Category4/oscars/oscars_both_budget.html" width="500px" height="400"></iframe>
-										<iframe src="assets/graphs/htmlfiles/Category4/oscars/oscars_both_rating.html" width="500px" height="400"></iframe>
-										<div style="display: flex; flex-direction: row; align-items: center; justify-content: space-around; flex-wrap: wrap; width: 100%;">																													
-												<iframe class="output_iframe" src="assets\graphs\htmlfiles\Category4/oscars/oscars_won_budget.html" style="border: none; width: 50%; height: 400px;"></iframe>
-												<iframe class="output_iframe" src="assets\graphs\htmlfiles\Category4/oscars/oscars_won_rating.html" style="border: none; width: 50%; height: 400px;"></iframe>
-												<iframe class="output_iframe" src="assets\graphs\htmlfiles\Category4/oscars/oscars_won_revenue.html" style="border: none; width: 70%; height: 400px;"></iframe>											
-										</div>																					
-									</div>
+									<div style="display: flex; flex-direction: column; align-items: center; justify-content: space-around; flex-wrap: wrap;">
+										<div style="display: flex; flex-direction: row; align-items: center; justify-content: space-around; flex-wrap: wrap; width: 100%;">
+										<div style="display: flex; flex-direction: row; align-items: center; width: auto;">
+											<label style="margin: auto;">Select:</label>
+											<select id="selectOptioncat5">
+												<option value="budgetcat5">Budget</option>
+												<option value="ratingcat5">Rating</option>
+												<option value="revenuecat5">Revenue</option>
+												<option value="votescat5">Votes</option>
+											</select>
+										</div> 
+											<iframe id="budgetcat5" class="cat5" src="assets/graphs/htmlfiles/Category4/oscars/oscars_both_budget.html" style="display:flex; border: none; width: 60%; height: 400px;"></iframe>
+											<iframe id="ratingcat5" class="cat5" src="assets/graphs/htmlfiles/Category4/oscars/oscars_both_rating.html" style="display:none; border: none; width: 60%; height: 400px;"></iframe>
+											<iframe id="revenuecat5" class="cat5" src="assets/graphs/htmlfiles/Category4/oscars/oscars_both_revenue.html" style="display:none; border: none; width: 60%; height: 400px;"></iframe>
+											<iframe id="votescat5" class="cat5" src="assets\graphs\htmlfiles\Category4/oscars/oscars_both_votes.html" style="display:none; border: none; width: 60%; height: 400px;"></iframe>											
+										</div>
+										<div style="display: flex; flex-direction: row; align-items: center; justify-content: space-around; flex-wrap: wrap; width: 100%;">	 
+											<iframe id="budgetcat5" class="cat5" src="assets/graphs/htmlfiles/Category4/oscars/oscars_nom_budget.html" style="display:flex; border: none; width: 50%; height: 400px;"></iframe>
+											<iframe id="ratingcat5" class="cat5" src="assets/graphs/htmlfiles/Category4/oscars/oscars_nom_rating.html" style="display:none; border: none; width: 50%; height: 400px;"></iframe>
+											<iframe id="revenuecat5" class="cat5" src="assets/graphs/htmlfiles/Category4/oscars/oscars_nom_revenue.html" style="display:none; border: none; width: 50%; height: 400px;"></iframe>
+											<iframe id="votescat5" class="cat5" src="assets\graphs\htmlfiles\Category4/oscars/oscars_nom_votes.html" style="display:none; border: none; width: 50%; height: 400px;"></iframe>											
+										 
+											<iframe id="budgetcat5" class="cat5" src="assets/graphs/htmlfiles/Category4/oscars/oscars_won_budget.html" style="display:flex; border: none; width: 50%; height: 400px;"></iframe>
+											<iframe id="ratingcat5" class="cat5" src="assets/graphs/htmlfiles/Category4/oscars/oscars_won_rating.html" style="display:none; border: none; width: 50%; height: 400px;"></iframe>
+											<iframe id="revenuecat5" class="cat5" src="assets/graphs/htmlfiles/Category4/oscars/oscars_won_revenue.html" style="display:none; border: none; width: 50%; height: 400px;"></iframe>
+											<iframe id="votescat5" class="cat5" src="assets\graphs\htmlfiles\Category4/oscars/oscars_won_votes.html" style="display:none; border: none; width: 50%; height: 400px;"></iframe>											
+										</div>
 									
+									</div>
 								</header>
 								
 								</footer>
@@ -148,8 +200,82 @@
 						<!-- Get Started -->
 							<section id="subquestion5" class="main special">
 								<header class="major">
-									<h2>Congue imperdiet</h2>
-									
+									<h2>Top100</h2>
+									<div style="display: flex; flex-direction: column; align-items: center; justify-content: space-around; flex-wrap: wrap; height: auto;">
+										<div style="display: flex; flex-direction: row; align-items: center; justify-content: space-around; flex-wrap: wrap; width: 100%;">
+											<div style="display: flex; flex-direction: row; align-items: center; width: auto;">
+												<label style="margin: auto;">Select Movie Range:</label>
+												<select id="selectRows">
+													<option value="100">100</option>
+													<option value="1000">1000</option>
+													<option value="10000">10000</option>
+												</select>
+												
+												<select id="selectPosition">
+													<option value="top">Top</option>
+													<option value="bottom">Bottom</option>
+												</select>
+											</div> 
+											<button onclick="hideIframe('cat6')">Show</button>
+
+											<iframe id="iframe_100_top" class="cat6" src="assets/graphs/htmlfiles/Category5/1movies/top100/top100movies_0.html" style="display:flex; border: none; width: 60%; height: 400px;"></iframe>
+											<iframe id="iframe_100_bottom" class="cat6" src="assets/graphs/htmlfiles/Category5/1movies/bot100/bot100movies_0.html" style="display:none; border: none; width: 60%; height: 400px;"></iframe>
+											<iframe id="iframe_1000_top" class="cat6" src="assets/graphs/htmlfiles/Category5/1movies/top100/top100movies_1000.html" style="display:none; border: none; width: 60%; height: 400px;"></iframe>
+											<iframe id="iframe_1000_bottom" class="cat6" src="assets\graphs\htmlfiles\Category5/1movies/bot100/bot100movies_1000.html" style="display:none; border: none; width: 60%; height: 400px;"></iframe>                                            
+											<iframe id="iframe_10000_top" class="cat6" src="assets\graphs\htmlfiles\Category5/1movies/top100/top100movies_100000.html" style="display:none; border: none; width: 60%; height: 400px;"></iframe>                                            
+											<iframe id="iframe_10000_bottom" class="cat6" src="assets\graphs\htmlfiles\Category5/1movies/bot100/bot100movies_100000.html" style="display:none; border: none; width: 60%; height: 400px;"></iframe>
+											</div>
+											<hr>
+											<div style="display: flex; flex-direction: row; align-items: center; justify-content: space-around; flex-wrap: wrap; width: 100%; height: auto;">
+												<div style="display: flex; flex-direction: row; align-items: center; width: auto; flex-wrap: wrap;">
+													<label style="margin: auto;">Select Director Range:</label>
+													<select id="selectRowscat7">
+														<option value="1">1</option>
+														<option value="5">5</option>
+														<option value="10">10</option>
+													</select>
+													
+													<select id="selectPositioncat7">
+														<option value="top">Top</option>
+														<option value="bottom">Bottom</option>
+													</select>
+												</div> 
+												<button onclick="showIframecat7()">Show</button>
+											
+												<iframe id="iframe_1_top" class="cat7" src="assets/graphs/htmlfiles/Category5/2directors/top/top100directors_1.html" style="display:flex; border: none; width: 60%; height: 400px;"></iframe>
+												<iframe id="iframe_1_bottom" class="cat7" src="assets/graphs/htmlfiles/Category5/2directors/bot/bot100directors_1.html" style="display:none; border: none; width: 60%; height: 400px;"></iframe>
+												<iframe id="iframe_5_top" class="cat7" src="assets/graphs/htmlfiles/Category5/2directors/top/top100directors_5.html" style="display:none; border: none; width: 60%; height: 400px;"></iframe>
+												<iframe id="iframe_5_bottom" class="cat7" src="assets/graphs/htmlfiles/Category5/2directors/bot/bot100directors_5.html" style="display:none; border: none; width: 60%; height: 400px;"></iframe>                                            
+												<iframe id="iframe_10_top" class="cat7" src="assets/graphs/htmlfiles/Category5/2directors/top/top100directors_10.html" style="display:none; border: none; width: 60%; height: 400px;"></iframe>                                            
+												<iframe id="iframe_10_bottom" class="cat7" src="assets/graphs/htmlfiles/Category5/2directors/bot/bot100directors_10.html" style="display:none; border: none; width: 60%; height: 400px;"></iframe>
+											</div>
+											<hr>
+											<div style="display: flex; flex-direction: row; align-items: center; justify-content: space-around; flex-wrap: wrap; width: 100%; height: auto;">
+												<div style="display: flex; flex-direction: row; align-items: center; width: auto; flex-wrap: wrap;">
+													<label style="margin: auto;">Select Writer Range:</label>
+													<select id="selectRowscat8">
+														<option value="1">1</option>
+														<option value="5">5</option>
+														<option value="10">10</option>
+													</select>
+													
+													<select id="selectPositioncat8">
+														<option value="top">Top</option>
+														<option value="bottom">Bottom</option>
+													</select>
+												</div> 
+												<button onclick="hideIframe('selectRowscat8','selectPositioncat8', 'cat8', '_w')">Show</button>
+											
+												<iframe id="iframe_1_top_w" class="cat8" src="assets/graphs/htmlfiles/Category5/3writers/top/top100writers_1.html" style="display:flex; border: none; width: 60%; height: 400px;"></iframe>
+												<iframe id="iframe_1_bottom_w" class="cat8" src="assets/graphs/htmlfiles/Category5/3writers/bot/bot100writers_1.html" style="display:none; border: none; width: 60%; height: 400px;"></iframe>
+												<iframe id="iframe_5_top_w" class="cat8" src="assets/graphs/htmlfiles/Category5/3writers/top/top100writers_5.html" style="display:none; border: none; width: 60%; height: 400px;"></iframe>
+												<iframe id="iframe_5_bottom_w" class="cat8" src="assets/graphs/htmlfiles/Category5/3writers/bot/bot100writers_5.html" style="display:none; border: none; width: 60%; height: 400px;"></iframe>                                            
+												<iframe id="iframe_10_top_w" class="cat8" src="assets/graphs/htmlfiles/Category5/3writers/top/top100writers_10.html" style="display:none; border: none; width: 60%; height: 400px;"></iframe>                                            
+												<iframe id="iframe_10_bottom_w" class="cat8" src="assets/graphs/htmlfiles/Category5/3writers/bot/bot100writers_10.html" style="display:none; border: none; width: 60%; height: 400px;"></iframe>
+											</div>
+											
+										
+									</div> 
 								</header>
 								
 							</section>
@@ -177,6 +303,6 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
-			<!--<script src="assets/js/graph.js"></script>-->
+			<script src="assets/js/graph.js"></script>
 	</body>
 </html>
