@@ -26,13 +26,26 @@ function showSelectedIframecat2() {
     var iframes = document.querySelectorAll('iframe');
     for (var i = 0; i < iframes.length; i++) {
         if (iframes[i].id === selectedOption) {
-            iframes[i].style.display = 'block';
+            iframes[i].style.display = 'flex';
         } else if (iframes[i].classList.contains('cat2')) {
             iframes[i].style.display = 'none'; 
         }
     }
 }
 document.getElementById('selectOptioncat2').addEventListener('change', showSelectedIframecat2);
+
+function hideCat2Iframes() {
+    var iframes = document.querySelectorAll('iframe.cat2');
+    for (var i = 1; i < iframes.length; i++) {
+        iframes[i].style.display = 'none';
+    }
+}
+
+// Call the function when the page loads
+window.onload = function() {
+    hideCat2Iframes();
+};
+
 
 function showSelectedIframecat3() {
     var selectedOption = document.getElementById('selectOptioncat3').value;
