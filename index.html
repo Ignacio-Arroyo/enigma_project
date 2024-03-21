@@ -23,7 +23,7 @@
 				<!-- Header -->
 					<header id="header" class="alt">
 						<h1>Data Science Project</h1>
-						<p>How did the average budget, revenue, genre and runtime of movies evolve since 1915?<br /></p>
+						<p>Analysis of movie trends since 1915<br /></p>
 					</header>
 
 				<!-- Nav -->
@@ -51,21 +51,31 @@
 							<section id="intro" class="main">
 								<div class="spotlight">
 									<div class="content">
-										<h1>Introduction</h1>
+										
+										<h1 style="align-items: left;">Home Page</h1>
 										<h2 style="text-align: left;">Data collection</h2>
-										<div style="display:flex; flex-direction: row;  justify-content: space-around;">
-										<p style="width: 50%;">We have collected data from IMDB which is a database of all the cinematographic records in the entire world. We have combined this database with the TMDB API which allows us to obtain information about the revenue and budget of each movie and some information about Oscars Awards to analyze that is useful to analyze the success of movies. The TMDB API could only provide us information about the revenue and budget of around ten thousand movies. For this research question, we narrowed down to only movies and we excluded tv series, documentaries, tv shows, etc.</p>
-										<div style="justify-content: space-around; align-items: center; display: flex; flex-wrap: wrap; ">
-											<img src="images/imdb.png" alt="IMDB Image" style="width: 150px;"> 
-										<img src="images/tmdb.jpeg" alt="TMDB Image" style="width: 150px;"> 
-										<img src="images/oscars.jpeg" alt="Oscars Image" style="width: 230px;"> 
-										</div>
+										<div style="display:flex; flex-direction: row;  justify-content: space-around; flex-wrap: wrap;">
+											<p >We have collected data from IMDB which is a database of all the cinematographic records in the entire world. We have combined this database with the TMDB API which allows us to obtain information about the revenue and budget of each movie and some information about Oscars Awards to analyze that is useful to analyze the success of movies. The TMDB API could only provide us information about the revenue and budget of around ten thousand movies. For this research question, we narrowed down to only movies and we excluded tv series, tv shows, etc.</p>
+										
+											<div style="justify-content: space-around; align-items: center; display: flex; flex-wrap: wrap; ">
+												<img src="images/imdb.png" alt="IMDB Image" style="width: 150px;"> 
+												<img src="images/tmdb.jpeg" alt="TMDB Image" style="width: 150px;"> 
+												<img src="images/oscars.jpeg" alt="Oscars Image" style="width: 230px;"> 
+											</div>
 										</div>
 									</div>
 								</div>
 									<div>
 										<h2>Data Available</h2>
 										<p>These are some of the available features that we could collect: genre, release year, budget, runtime, directors, writers, rating, number of votes, awards, budget, revenue</p>
+									</div>
+									<div>
+										<h2>What do we mean by successfull?</h2>
+										<p>For our research questions we use the term "success" multiple times. The metrics we use to measure the success of a movie are
+											the average imdb rating, to see how people enjoyed the movie, the number of votes on imdb, which gives us an idea of how many
+											people watched that movie, and the revenue which tells is how much money the movie made.
+											
+										</p>
 									</div>
 							</section>
 							
@@ -75,9 +85,23 @@
 								<header class="major">
 									<h2>How did the runtime, genre distribution and success of movies change from 1915 until today?</h2>
 									<div style="display: flex; flex-direction: row; align-items: center; justify-content: space-around; flex-wrap: wrap;">
-										<iframe src="assets/graphs/htmlfiles/Category1/1runtime_years/runtime_years.html" width="400px" height="400"></iframe>
-										<iframe src="assets/graphs/htmlfiles/Category1/movies_years.html" width="400px" height="400"></iframe>
-										<iframe src="assets/graphs/htmlfiles/Category1/2genre_years/genre_over_years.html" width="600px" height="400"></iframe>
+										<div>
+											<iframe src="assets/graphs/htmlfiles/Category1/1runtime_years/runtime_years.html" width="100%" height="400"></iframe>
+											<p style="font-size: 22px;">The average runtime of movies has steadily increased since 1915.</p>
+										</div>
+										<div>
+											<iframe src="assets/graphs/htmlfiles/Category1/movies_years.html" width="100%" height="400"></iframe>
+											<p style="font-size: 22px;">The amount of movies released has increased almost every year since 1915. 
+												There was a significant drop in 2020, probably caused by the covid pandiemic.</p>
+										</div>
+										<div>
+											<iframe src="assets/graphs/htmlfiles/Category1/2genre_years/genre_over_years.html" width="100%" height="400"></iframe>
+											<p style="font-size: 22px;">Drama and comedy have been the most popular genres from 1915 even until today. 
+											Romance also used to be one of the most popular genres, but has since been surpassed by Documentaries, Thriller and Horror movies.</p>
+										</div>
+										
+										
+										
 										<div style="display: flex; flex-direction: row; align-items: center; justify-content: space-around; flex-wrap: wrap; width: 100%;">
 											<div style="display: flex; flex-direction: row; align-items: center;">
 												<label style="margin: auto;">Select:</label>
@@ -88,11 +112,15 @@
 													<option value="votes">Votes</option>
 												</select>
 											</div> 	
-																														
-												<iframe id="budget" class="cat1" src="assets\graphs\htmlfiles\Category1\3relation_years\year_budget.html" style="display:flex; border: none; width: 50%; height: 400px;"></iframe>
-												<iframe id="revenue" class="cat1" src="assets\graphs\htmlfiles\Category1\3relation_years\year_revenue.html" style="display:none; border: none; width: 50%; height: 400px;"></iframe>
-												<iframe id="rating" class="cat1" src="assets\graphs\htmlfiles\Category1\3relation_years\year_rating.html" style="display:none; border: none; width: 50%; height: 400px;"></iframe>											
-												<iframe id="votes" class="cat1" src="assets\graphs\htmlfiles\Category1\3relation_years\year_votes.html" style="display:none; border: none; width: 50%; height: 400px;"></iframe>											
+																															<div>
+												<iframe id="budget" class="cat1" src="assets\graphs\htmlfiles\Category1\3relation_years\year_budget.html" style="display:flex; border: none; width: 100%; height: 400px;"></iframe>
+												<iframe id="revenue" class="cat1" src="assets\graphs\htmlfiles\Category1\3relation_years\year_revenue.html" style="display:none; border: none; width: 100%; height: 400px;"></iframe>
+												<iframe id="rating" class="cat1" src="assets\graphs\htmlfiles\Category1\3relation_years\year_rating.html" style="display:none; border: none; width: 100%; height: 400px;"></iframe>											
+												<iframe id="votes" class="cat1" src="assets\graphs\htmlfiles\Category1\3relation_years\year_votes.html" style="display:none; border: none; width: 100%; height: 400px;"></iframe>	
+												<p style="font-size: 22px;">The average budget and revenue of movies has steadily increased over the years, peaking at an average budget of
+													62 Million USD$ and an average revenue of 225 Million USD$ in 2017. In contrast to that, the average rating of movies has steadily decreased. 
+													We think that this is caused by there beeing more movies beeing created every year, which leads to an overall decrease in quality.</p>					
+											</div>					
 										</div>																					
 									</div>
 									
@@ -103,9 +131,15 @@
 							<section id="subquestion2" class="main special">
 								<header class="major">
 									<h2>Which are the most popular and most successfull genres, and which combinations of genres are most common?</h2>
+									<p style="font-size: 22px;">To see how the genre of movies are distributed we looked at the genre of all movies in IMDb. Further we look at individual genres to see if there are genres that gained or lost popularity over time.</p>
 									<div style="display: flex; flex-direction: column; align-items: center; justify-content: space-around; flex-wrap: wrap;">
-										<iframe src="assets/graphs/htmlfiles/Category2/1distribution single/genres_single.html" width="700px" height="400"></iframe>
-										<iframe src="assets/graphs/htmlfiles/Category2/2distribution combinations/genres_combinations.html" width="700px" height="400"></iframe>
+										<iframe src="assets/graphs/htmlfiles/Category2/1distribution single/genres_single.html" width="100%" height="400"></iframe>
+										<p style="font-size: 22px;">By attributing above 50% of all movies, drama is by far the most popular genre. The second and third most common
+											genres are Comedy with 27% and Romance with 12%. It should be noted that the Percantages of all genres dont sum up to 100, since movies are labeled with
+											up to 3 genres.</p>
+										<iframe src="assets/graphs/htmlfiles/Category2/2distribution combinations/genres_combinations.html" width="100%" height="400"></iframe>
+										<p style="font-size: 22px;">As already expected from the genre distribution, the most common combinations are combinations of drama, comedy and romance with each other and other popular genres.
+											Notible combinations are Horror with Thriller and Biography with Documentary.</p>
 										<div style="display: flex; flex-direction: row; align-items: center; justify-content: space-around; flex-wrap: wrap; width: 100%;">		
 											<div style="display: flex; flex-direction: row; align-items: center;">
 												<label style="margin: auto;">Select:</label>
@@ -115,10 +149,15 @@
 													<option value="votescat2">Votes</option>
 												</select>
 											</div> 
-												<iframe id="ratingcat2" class="cat2" src="assets\graphs\htmlfiles\Category2/3relations/genre_rating.html" style="display:flex; border: none; width: 70%; height: 600px;"></iframe>
-												<iframe id="revenuecat2" class="cat2" src="assets\graphs\htmlfiles\Category2/3relations/genre_revenue.html" style="display:flex; border: none; width: 70%; height: 600px;"></iframe>
-												<iframe id="votescat2" class="cat2" src="assets\graphs\htmlfiles\Category2/3relations/genre_votes.html" style="display:flex; border: none; width: 70%; height: 600px;"></iframe>
-												<iframe class="output_iframe" src="assets\graphs\htmlfiles\Category2/4oscars/genre_oscars.html" style="border: none; width: 70%; height: 400px;"></iframe>											
+												<iframe id="ratingcat2" class="cat2" src="assets\graphs\htmlfiles\Category2/3relations/genre_rating.html" style="display:flex; border: none; width: 100%; height: 600px;"></iframe>
+												<iframe id="revenuecat2" class="cat2" src="assets\graphs\htmlfiles\Category2/3relations/genre_revenue.html" style="display:flex; border: none; width: 100%; height: 600px;"></iframe>
+												<iframe id="votescat2" class="cat2" src="assets\graphs\htmlfiles\Category2/3relations/genre_votes.html" style="display:flex; border: none; width: 100%; height: 600px;"></iframe>
+												<p style="font-size: 22px;">Are there differences in the IMDb ratings for movies released in different years? First of all the average rating of all movies released in year declines over the years. In the box plot one can also see that the variance in the ratings declines.
+													Do movies get worse? We can not answer this in our research, but what we can say is, that newer movies have a higher number of reviews as seen in figure 2 with a rise of the average number of reviews per year. So older movies get reviewed less than newer ones, which may also influence the rating given in those reviews.</p>
+												<iframe class="output_iframe" src="assets\graphs\htmlfiles\Category2/4oscars/genre_oscars.html" style="border: none; width: 100%; height: 400px;"></iframe>	
+												<p style="font-size: 22px;">The distribution of oscar wins and nominations among the genres looks similar to the distributions of genres, with drama and romance having the most
+													oscar nominations and wins, and the only genres without any nominations are very specific genres like reality-tv. Note that Oscar Nominations don't include
+													Oscars won.</p>										
 										</div>																					
 									</div>
 								</header>
@@ -126,6 +165,7 @@
 							<section id="subquestion3" class="main special">
 								<header class="major">
 									<h2>Do the runtime and the budget of a movie have a measurable effect on its success?</h2>
+									<p style="font-size: 22px;">For an overview we look at the average budget and revenue over time. Not surprisingly both values rise over the years with a drop in 2020 when the Corona pandemic hit. Further we look at the differences between different genres.</p>
 									<div style="display: flex; flex-direction: column; align-items: center; justify-content: space-around; flex-wrap: wrap;">
 										<div style="display: flex; flex-direction: row; align-items: center; justify-content: space-around; flex-wrap: wrap; width: 100%;">
 										<div style="display: flex; flex-direction: row; align-items: center; width: auto;">
@@ -136,9 +176,10 @@
 												<option value="votescat3">Votes</option>
 											</select>
 										</div> 
-											<iframe id="ratingcat3" class="cat3" src="assets/graphs/htmlfiles/Category3/1runtime/runtime_rating.html" style="display:flex; border: none; width: 50%; height: 400px;"></iframe>
-											<iframe id="revenuecat3" class="cat3" src="assets/graphs/htmlfiles/Category3/1runtime/runtime_revenue.html" style="display:none; border: none; width: 50%; height: 400px;"></iframe>
-											<iframe id="votescat3" class="cat3" src="assets\graphs\htmlfiles\Category3/1runtime/runtime_votes.html" style="display:none; border: none; width: 50%; height: 400px;"></iframe>											
+											<iframe id="ratingcat3" class="cat3" src="assets/graphs/htmlfiles/Category3/1runtime/runtime_rating.html" style="display:flex; border: none; width: 100%; height: 400px;"></iframe>
+											<iframe id="revenuecat3" class="cat3" src="assets/graphs/htmlfiles/Category3/1runtime/runtime_revenue.html" style="display:none; border: none; width: 100%; height: 400px;"></iframe>
+											<iframe id="votescat3" class="cat3" src="assets\graphs\htmlfiles\Category3/1runtime/runtime_votes.html" style="display:none; border: none; width: 100%; height: 400px;"></iframe>								<p style="font-size: 22px;">For the rating its visible that with increasing length of a movie the average rating increases. For the number
+												of votes and the revenue we can see that the trendline peaks at around 120 minutes. The tendline is a locally weighted regression line.</p>	
 										</div>
 									<div style="display: flex; flex-direction: column; align-items: center; justify-content: space-around; flex-wrap: wrap; width: 100%;">
 										<div style="display: flex; flex-direction: row; align-items: center; justify-content: space-around; flex-wrap: wrap; width: 100%;">
@@ -150,9 +191,12 @@
 												<option value="votescat4">Votes</option>
 											</select>
 										</div> 
-											<iframe id="ratingcat4" class="cat4" src="assets/graphs/htmlfiles/Category3/2budget/budget_rating.html" style="display:flex; border: none; width: 50%; height: 400px;"></iframe>
-											<iframe id="revenuecat4" class="cat4" src="assets/graphs/htmlfiles/Category3/2budget/budget_revenue.html" style="display:none; border: none; width: 50%; height: 400px;"></iframe>
-											<iframe id="votescat4" class="cat4" src="assets\graphs\htmlfiles\Category3/2budget/budget_votes.html" style="display:none; border: none; width: 50%; height: 400px;"></iframe>											
+											<iframe id="ratingcat4" class="cat4" src="assets/graphs/htmlfiles/Category3/2budget/budget_rating.html" style="display:flex; border: none; width: 100%; height: 400px;"></iframe>
+											<iframe id="revenuecat4" class="cat4" src="assets/graphs/htmlfiles/Category3/2budget/budget_revenue.html" style="display:none; border: none; width: 100%; height: 400px;"></iframe>
+											<iframe id="votescat4" class="cat4" src="assets\graphs\htmlfiles\Category3/2budget/budget_votes.html" style="display:none; border: none; width: 100%; height: 400px;"></iframe>								<p style="font-size: 22px;">As to be expected, an increasing budget has a positive impact on the rating, the number of votes and the revenue of a movie. But we can also see
+												that for a movie to be well rated and having many votes its not necessary to have a high budghet. The relation to the revenue looks the highest.
+												The ordinary least squares regression trendline has approximatly the formular revenue = 3*budget-7500000, which suggests that on average movies with a budget above
+												3750000 USD$ are more likely to have a revenue larger that its budget.</p>	
 										</div>
 										
 																														
@@ -164,6 +208,8 @@
 							<section id="subquestion4" class="main special">
 								<header class="major">
 									<h2>How are the budget and the success of a movie related to the distribution of the oscars?</h2>
+									<p style="font-size: 22px;">As an example for award winning we look at Oscar nominations and wins in combination with different metrics.
+										The metrics which can be shown are budget, revenue, number of votes and rating. Its also possible to observe only Oscar wins, nominations or both.</p>
 									<div style="display: flex; flex-direction: column; align-items: center; justify-content: space-around; flex-wrap: wrap;">
 										<div style="display: flex; flex-direction: row; align-items: center; justify-content: space-around; flex-wrap: wrap; width: 100%;">
 										<div style="display: flex; flex-direction: row; align-items: center; width: auto;">
@@ -176,21 +222,21 @@
 											</select>
 										</div> 
 										<div style="display: flex; flex-direction: column; align-items: center; justify-content: space-around; flex-wrap: wrap; width: 100%;">	
-											<iframe id="budgetcat5" class="cat5" src="assets/graphs/htmlfiles/Category4/oscars/oscars_both_budget.html" style="display:flex; border: none; width: 80%; height: 400px;"></iframe>
-											<iframe id="ratingcat5" class="cat5" src="assets/graphs/htmlfiles/Category4/oscars/oscars_both_rating.html" style="display:none; border: none; width: 80%; height: 400px;"></iframe>
-											<iframe id="revenuecat5" class="cat5" src="assets/graphs/htmlfiles/Category4/oscars/oscars_both_revenue.html" style="display:none; border: none; width: 80%; height: 400px;"></iframe>
-											<iframe id="votescat5" class="cat5" src="assets\graphs\htmlfiles\Category4/oscars/oscars_both_votes.html" style="display:none; border: none; width: 80%; height: 400px;"></iframe>											
+											<iframe id="budgetcat5" class="cat5" src="assets/graphs/htmlfiles/Category4/oscars/oscars_both_budget.html" style="display:flex; border: none; width: 100%; height: 400px;"></iframe>
+											<iframe id="ratingcat5" class="cat5" src="assets/graphs/htmlfiles/Category4/oscars/oscars_both_rating.html" style="display:none; border: none; width: 100%; height: 400px;"></iframe>
+											<iframe id="revenuecat5" class="cat5" src="assets/graphs/htmlfiles/Category4/oscars/oscars_both_revenue.html" style="display:none; border: none; width: 100%; height: 400px;"></iframe>
+											<iframe id="votescat5" class="cat5" src="assets\graphs\htmlfiles\Category4/oscars/oscars_both_votes.html" style="display:none; border: none; width: 100%; height: 400px;"></iframe>											
 										
 										 
-											<iframe id="budgetcat5" class="cat5" src="assets/graphs/htmlfiles/Category4/oscars/oscars_nom_budget.html" style="display:flex; border: none; width: 80%; height: 400px;"></iframe>
-											<iframe id="ratingcat5" class="cat5" src="assets/graphs/htmlfiles/Category4/oscars/oscars_nom_rating.html" style="display:none; border: none; width: 80%; height: 400px;"></iframe>
-											<iframe id="revenuecat5" class="cat5" src="assets/graphs/htmlfiles/Category4/oscars/oscars_nom_revenue.html" style="display:none; border: none; width: 80%; height: 400px;"></iframe>
-											<iframe id="votescat5" class="cat5" src="assets\graphs\htmlfiles\Category4/oscars/oscars_nom_votes.html" style="display:none; border: none; width: 80%; height: 400px;"></iframe>											
+											<iframe id="budgetcat5" class="cat5" src="assets/graphs/htmlfiles/Category4/oscars/oscars_nom_budget.html" style="display:flex; border: none; width: 100%; height: 400px;"></iframe>
+											<iframe id="ratingcat5" class="cat5" src="assets/graphs/htmlfiles/Category4/oscars/oscars_nom_rating.html" style="display:none; border: none; width: 100%; height: 400px;"></iframe>
+											<iframe id="revenuecat5" class="cat5" src="assets/graphs/htmlfiles/Category4/oscars/oscars_nom_revenue.html" style="display:none; border: none; width: 100%; height: 400px;"></iframe>
+											<iframe id="votescat5" class="cat5" src="assets\graphs\htmlfiles\Category4/oscars/oscars_nom_votes.html" style="display:none; border: none; width: 100%; height: 400px;"></iframe>											
 										 
-											<iframe id="budgetcat5" class="cat5" src="assets/graphs/htmlfiles/Category4/oscars/oscars_won_budget.html" style="display:flex; border: none; width: 80%; height: 400px;"></iframe>
-											<iframe id="ratingcat5" class="cat5" src="assets/graphs/htmlfiles/Category4/oscars/oscars_won_rating.html" style="display:none; border: none; width: 80%; height: 400px;"></iframe>
-											<iframe id="revenuecat5" class="cat5" src="assets/graphs/htmlfiles/Category4/oscars/oscars_won_revenue.html" style="display:none; border: none; width: 80%; height: 400px;"></iframe>
-											<iframe id="votescat5" class="cat5" src="assets\graphs\htmlfiles\Category4/oscars/oscars_won_votes.html" style="display:none; border: none; width: 80%; height: 400px;"></iframe>											
+											<iframe id="budgetcat5" class="cat5" src="assets/graphs/htmlfiles/Category4/oscars/oscars_won_budget.html" style="display:flex; border: none; width: 100%; height: 400px;"></iframe>
+											<iframe id="ratingcat5" class="cat5" src="assets/graphs/htmlfiles/Category4/oscars/oscars_won_rating.html" style="display:none; border: none; width: 100%; height: 400px;"></iframe>
+											<iframe id="revenuecat5" class="cat5" src="assets/graphs/htmlfiles/Category4/oscars/oscars_won_revenue.html" style="display:none; border: none; width: 100%; height: 400px;"></iframe>
+											<iframe id="votescat5" class="cat5" src="assets\graphs\htmlfiles\Category4/oscars/oscars_won_votes.html" style="display:none; border: none; width: 100%; height: 400px;"></iframe>											
 										</div></div>
 									
 									</div>
@@ -203,20 +249,22 @@
 							<section id="subquestion5" class="main special">
 								<header class="major">
 									<h2>Top100</h2>
-									<p style="margin: auto;">What are the top 100 best and worst rated movies, based on the number of votes?</p>
-									<p>Who are the top 100 best and worst rated directors and writers, based on the amount of movies they worked on?</p>
+									<h4>What are the top 100 best and worst rated movies, based on the number of votes? <br> Who are the top 100 best and worst rated directors and writers, based on the amount of movies they worked on?</h4>
+									
+									<p style="font-size: 22px; margin-bottom: 3px; text-align: left;">Does a (previous) successful director or writer make a successful film?
+										For this question we compare the success of a movie to the success of the writer and directors previous/other films. This comparison is done for all three dimensions of success: the IMDb rating, the revenue and an Oscar win or nomination.</p>
 									<div style="display: flex; flex-direction: column; align-items: center; justify-content: space-around; flex-wrap: wrap; height: auto;">
 										<div style="display: flex; flex-direction: column; align-items: center; justify-content: space-around; flex-wrap: wrap; width: 100%;">
-											<label style="margin: auto;">Select Movie Vote Range:</label>
+											<label style="margin: auto;">Select Movie Minimum Votes:</label>
 											<div style="display: flex; flex-direction: row; align-items: center; width: auto;">
 												<select id="selectPosition" style=" width: 250px;">
 													<option value="top">Top</option>
 													<option value="bottom">Bottom</option>
 												</select>
 												<select id="selectRows" style=" width: 250px;">
-													<option value="100">1-1000</option>
-													<option value="1000">1000-100,000</option>
-													<option value="10000">100,000- +</option>
+													<option value="100">1+</option>
+													<option value="1000">1000+</option>
+													<option value="10000">100,000+</option>
 												</select>
 												
 												
@@ -291,9 +339,10 @@
 							<section id="about_us" class="main special">
 								<header class="major">
 									<h2>About Us</h2>
-									<p style="font-size: 20px; margin-bottom: 10px; text-align: left;">We, a collective of computer science scholars currently in our fifth semester pursuing our Bachelor's degree at Christian-Albrechts-Universität Kiel, harbor a profound interest in comprehending the contemporary landscape of global movie productions. Driven by this curiosity, we have embarked upon a rigorous inquiry aimed at elucidating the evolution of various critical factors associated with cinematic endeavors since the year 1915.</p>
-									<p style="font-size: 20px; margin-bottom: 10px; text-align: left;">To achieve this noble pursuit, we have formulated the following research questions as guiding beacons: <span style="font-weight: bold;">"How has the average budget, revenue, genre distribution, and runtime of movies evolved over the years?"</span> Through meticulous analysis and diligent study, we aspire to unravel the intricate tapestry of trends and transformations that have shaped the cinematic realm throughout its storied history.</p>
-									<p style="font-size: 20px; margin-bottom: 30px; text-align: left;">Our endeavor stands as a testament to our unwavering dedication to scholarly inquiry and intellectual exploration. It is our sincere hope that our research endeavors not only captivate your interest but also provide valuable insights into the dynamic landscape of contemporary movie production.</p>
+									<p style="font-size: 20px; margin-bottom: 10px; text-align: left;">
+										We're a group of computer science students in our fifth semester at Christian-Albrechts-Universität Kiel, and we're really into understanding how movies have changed over the years. We've got some burning questions:<span style="font-weight: bold;"> How have things like budgets, revenue, genres, and movie lengths evolved since way back in 1915?</span> We're diving deep into the data to find out.</p>
+									<p style="font-size: 20px; margin-bottom: 10px; text-align: left;">Our mission? To uncover all the cool trends and shifts that have shaped the world of movies over time. We're super excited about this project and hope it gives you some fascinating insights into how movies are made today.</p>
+									<p style="font-size: 20px; margin-bottom: 30px; text-align: left;">So, buckle up and join us on this awesome journey through the history of cinema!</p>
 									<p style="font-size: 20px; margin-bottom: 10px; text-align: right; font-weight: bold;">Members of the Enigma team - Ignacio Arroyo Garza, Lukas Kölln, Madita Mohr and Jannis Blöcker</p>
 								</header>
 							</section>
